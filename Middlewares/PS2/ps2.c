@@ -113,8 +113,8 @@ uint8_t PS2_IsButtonPressed(PS2_Data_t* data, uint16_t button)
 static void PS2_CS_Low(void)
 {
     HAL_GPIO_WritePin(PS2_CS_PORT, PS2_CS_PIN, GPIO_PIN_RESET);
-    /* Small delay for signal stabilization */
-    for (volatile int i = 0; i < 100; i++);
+    /* Small delay for signal stabilization (microseconds) */
+    for (volatile int i = 0; i < 10; i++);  /* ~1us delay */
 }
 
 /**
@@ -123,8 +123,8 @@ static void PS2_CS_Low(void)
 static void PS2_CS_High(void)
 {
     HAL_GPIO_WritePin(PS2_CS_PORT, PS2_CS_PIN, GPIO_PIN_SET);
-    /* Small delay for signal stabilization */
-    for (volatile int i = 0; i < 100; i++);
+    /* Small delay for signal stabilization (microseconds) */
+    for (volatile int i = 0; i < 10; i++);  /* ~1us delay */
 }
 
 /**

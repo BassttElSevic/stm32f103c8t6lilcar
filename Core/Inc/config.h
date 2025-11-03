@@ -18,6 +18,8 @@
 
 /* PWM Configuration */
 #define MOTOR_PWM_FREQUENCY     1000    /* PWM frequency in Hz (1kHz) */
+#define MOTOR_PWM_PRESCALER     71      /* Timer prescaler (72MHz / 72 = 1MHz) */
+#define MOTOR_PWM_PERIOD        999     /* Timer period (1MHz / 1000 = 1kHz) */
 #define MOTOR_PWM_MAX_VALUE     1000    /* Maximum PWM value (100% duty cycle) */
 #define MOTOR_PWM_MIN_VALUE     0       /* Minimum PWM value (0% duty cycle) */
 

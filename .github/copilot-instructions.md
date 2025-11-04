@@ -30,7 +30,7 @@ This repository contains firmware for an STM32F103C8T6-based small car (小车) 
 
 ### C/C++ Specific
 - **C Standard**: C11 with extensions enabled
-- **Headers**: Always include header guards (e.g., `#ifndef MODULE_NAME_H` or `#ifndef MODULE_NAME_H_`)
+- **Headers**: Always include header guards (e.g., `#ifndef MODULE_NAME_H`)
   - Note: Existing code may use `__` prefix, but avoid using reserved identifiers in new code
 - **Extern C**: Wrap C++ headers with `extern "C"` blocks for C compatibility
 - **Includes**: Group in order: standard library, HAL, application headers
@@ -76,7 +76,7 @@ cmake --build build
 
 ### Flashing and Debugging
 - Use ST-Link or compatible programmer
-- Debug build directory: `cmake-build-debug-stm-32/` (IDE-specific)
+- Build output directory depends on your IDE/configuration (e.g., CLion uses `cmake-build-debug-stm-32/`)
 
 ## Architecture Guidelines
 
